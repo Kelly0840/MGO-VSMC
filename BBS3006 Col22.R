@@ -1,3 +1,6 @@
+# Clear environment and set working directory
+rm(list = ls(all = TRUE))
+
 #Loading all required packages in script
 if (!require("readr")) install.packages("readr")
 library(readr)

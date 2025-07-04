@@ -1,6 +1,5 @@
-# To normalise all data against young no MGO (in step #...), to only account for age differences
-
-# Genes: NRF2, p16, p21
+# Clear environment and set working directory
+rm(list = ls(all = TRUE))
 
 #Loading all required packages in script
 if (!require("readr")) install.packages("readr")
@@ -95,7 +94,7 @@ old_data_base <- old_data_base[, c("Experiment.Name", "Task", "Well", "Biologica
                                    "Target.Name", "Amp.Status", "Amp.Score", "Cq.Conf", "Target.Efficiency", "C_")]
 # 1.2 Creating new dataframes, one for each gene
 # Each gene has 48 rows of data
-old_HPRT1_dataframe <- old_data_base[1:48, ]
+old_HPRT1_dataframe <- old_data_base[1:48, ] 
 rownames(old_HPRT1_dataframe) <- NULL
 
 old_NRF2_dataframe <- old_data_base[49:96, ]

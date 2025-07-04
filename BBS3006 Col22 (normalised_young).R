@@ -1,6 +1,5 @@
-## To normalise all data against young no MGO (in step #...), to only account for age differences
-
-# Genes: Col22A1
+# Clear environment and set working directory
+rm(list = ls(all = TRUE))
 
 #Loading all required packages in script
 if (!require("readr")) install.packages("readr")
